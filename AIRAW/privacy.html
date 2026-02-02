@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="https://airaw.online/favicon.png">
+    <title>Kebijakan Privasi - AI RAW</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* MENGGUNAKAN STYLE 100% DARI SUMBER ASLI 
+        */
+
+        /* ---------- PALETTE & TYPOGRAPHY ---------- */
+        :root {
+            --accent-color: #006400;
+            --accent-dim: rgba(0, 100, 0, 0.15);
+            --danger-color: #FF453A;
+
+            --bg-body: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --text-primary: #000000;
+            --text-secondary: #6e6e73;
+            --border-color: rgba(60,60,67,0.12);
+
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Inter", sans-serif;
+            --font-mono: "SF Mono", "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+            --font-beatles: "Abril Fatface", serif;
+
+            --radius-lg: 26px;
+            --shadow-sm: 0 4px 14px rgba(0,0,0,0.08);
+        }
+
+        [data-theme="dark"] {
+            --accent-color: #00FF00;            
+            --bg-body: #000000;
+            --bg-card: #111111;
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(235,235,245,0.65);
+            --border-color: rgba(255,255,255,0.1);
+        }
+
+        /* ---------- RESET & BASE ---------- */
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html, body { height: 100dvh; width: 100%; overflow: hidden; background: var(--bg-body); color: var(--text-primary); font-family: var(--font-stack); font-size: 15px; line-height: 1.5; transition: background 0.3s ease; }
+        
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(0, 255, 0, 0.3); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0, 255, 0, 0.5); }
+
+        /* ---------- LAYOUT SPECIFIC FOR PRIVACY PAGE ---------- */
+        .page-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        #mascot-background { 
+            position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 0; pointer-events: none; 
+            display: flex; justify-content: center; align-items: center; overflow: hidden; 
+        }
+        #mascot-background img { 
+            width: 100%; height: 100%; object-fit: cover; opacity: 0.03; filter: grayscale(100%) contrast(80%); 
+        }
+
+        .content-scroll-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 40px 20px;
+            z-index: 10;
+        }
+
+        .policy-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .brand-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .brand-title {
+            font-family: var(--font-beatles);
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-color);
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .policy-card { padding: 25px; }
+            .brand-title { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <div id="mascot-background">
+            <img src="mascot.png" alt="" onerror="this.style.display='none'">
+        </div>
+
+        <div class="content-scroll-area">
+            <div class="policy-card">
+                <div class="brand-header">
+                    <div class="brand-title">AI RAW</div>
+                </div>
+
+                <div id="content-id">
+                    <h1>Kebijakan Privasi</h1>
+                    
+                    <p>Terakhir diperbarui: Januari 2026</p>
+                    <p>Selamat datang di AI RAW. Kami menghargai privasi Anda dan berkomitmen untuk melindungi informasi pribadi Anda. Dokumen ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan menjaga data Anda.</p>
+
+                    <h2>1. Informasi yang Kami Kumpulkan</h2>
+                    <p>Kami mengumpulkan informasi yang Anda berikan secara langsung kepada kami saat menggunakan layanan chat:</p>
+                    <ul>
+                        <li><strong>Informasi Akun:</strong> Jika Anda login menggunakan Google, kami menyimpan nama, email, dan foto profil dasar untuk identifikasi sesi.</li>
+                        <li><strong>Konten Chat:</strong> Riwayat percakapan Anda disimpan secara lokal di perangkat Anda (Local Storage) atau di database kami jika Anda memilih untuk menyimpannya, semata-mata untuk memberikan kontinuitas percakapan.</li>
+                        <li><strong>Gambar:</strong> Gambar yang Anda unggah diproses sementara untuk analisis AI dan tidak digunakan untuk tujuan lain.</li>
+                    </ul>
+
+                    <h2>2. Penggunaan Informasi</h2>
+                    <p>Kami menggunakan informasi tersebut untuk:</p>
+                    <ul>
+                        <li>Menyediakan, memelihara, dan meningkatkan layanan AI RAW.</li>
+                        <li>Mempersonalisasi pengalaman pengguna (misalnya, tema gelap/terang dan preferensi bahasa).</li>
+                        <li>Menanggapi komentar, pertanyaan, dan permintaan layanan pelanggan.</li>
+                    </ul>
+
+                    <h2>3. Penyimpanan Data Lokal</h2>
+                    <p>Aplikasi ini menggunakan <code>localStorage</code> pada browser Anda untuk menyimpan:</p>
+                    <ul>
+                        <li>Preferensi tema (Dark/Light).</li>
+                        <li>Preferensi bahasa (Indonesia/English).</li>
+                        <li>Riwayat chat (jika Anda tidak menghapusnya).</li>
+                    </ul>
+                    <p>Anda memiliki kendali penuh untuk menghapus riwayat ini kapan saja melalui tombol "Bersihkan Riwayat" di menu samping.</p>
+
+                    <h2>4. Keamanan</h2>
+                    <p>Kami menerapkan langkah-langkah keamanan yang wajar untuk melindungi informasi Anda dari akses yang tidak sah, perubahan, pengungkapan, atau penghancuran. Namun, harap diingat bahwa tidak ada metode transmisi melalui internet yang 100% aman.</p>
+
+                    <h2>5. Perubahan Kebijakan Ini</h2>
+                    <p>Kami dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu. Jika kami melakukan perubahan, kami akan memberi tahu Anda dengan merevisi tanggal di bagian atas kebijakan ini.</p>
+
+                    <h2>6. Hubungi Kami</h2>
+                    <p>Jika Anda memiliki pertanyaan tentang Kebijakan Privasi ini, silakan hubungi kami melalui menu pengaturan di dalam aplikasi.</p>
+                </div>
+
+                <div id="content-en" style="display: none;">
+                    <h1>Privacy Policy</h1>
+                    
+                    <p>Last updated: January 2026</p>
+                    <p>Welcome to AI RAW. We value your privacy and are committed to protecting your personal information. This document explains how we collect, use, and safeguard your data.</p>
+
+                    <h2>1. Information We Collect</h2>
+                    <p>We collect information you provide directly to us when using the chat service:</p>
+                    <ul>
+                        <li><strong>Account Information:</strong> If you log in using Google, we store your name, email, and basic profile photo for session identification.</li>
+                        <li><strong>Chat Content:</strong> Your conversation history is stored locally on your device (Local Storage) or in our database if you choose to save it, solely to provide conversation continuity.</li>
+                        <li><strong>Images:</strong> Images you upload are processed temporarily for AI analysis and are not used for other purposes.</li>
+                    </ul>
+
+                    <h2>2. Use of Information</h2>
+                    <p>We use this information to:</p>
+                    <ul>
+                        <li>Provide, maintain, and improve the AI RAW service.</li>
+                        <li>Personalize the user experience (e.g., dark/light theme and language preferences).</li>
+                        <li>Respond to comments, questions, and customer service requests.</li>
+                    </ul>
+
+                    <h2>3. Local Data Storage</h2>
+                    <p>This application uses <code>localStorage</code> on your browser to store:</p>
+                    <ul>
+                        <li>Theme preferences (Dark/Light).</li>
+                        <li>Language preferences (Indonesia/English).</li>
+                        <li>Chat history (if you do not delete it).</li>
+                    </ul>
+                    <p>You have full control to clear this history at any time via the "Clear History" button in the sidebar.</p>
+
+                    <h2>4. Security</h2>
+                    <p>We implement reasonable security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. However, please remember that no method of transmission over the internet is 100% secure.</p>
+
+                    <h2>5. Changes to This Policy</h2>
+                    <p>We may update this Privacy Policy from time to time. If we make changes, we will notify you by revising the date at the top of this policy.</p>
+
+                    <h2>6. Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us via the settings menu within the application.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const htmlTag = document.documentElement;
+            // 1. Theme Sync
+            const savedTheme = localStorage.getItem('ari_theme');
+            htmlTag.setAttribute('data-theme', (savedTheme === 'light') ? 'light' : 'dark');
+
+            // 2. Language Sync
+            const currentLang = localStorage.getItem('ari_lang') || 'ID';
+            const contentID = document.getElementById('content-id');
+            const contentEN = document.getElementById('content-en');
+
+            if (currentLang === 'EN') {
+                contentID.style.display = 'none';
+                contentEN.style.display = 'block';
+                document.title = "Privacy Policy - AI RAW";
+            } else {
+                contentID.style.display = 'block';
+                contentEN.style.display = 'none';
+                document.title = "Kebijakan Privasi - AI RAW";
+            }
+        });
+    </script>
+</body>
+</html>

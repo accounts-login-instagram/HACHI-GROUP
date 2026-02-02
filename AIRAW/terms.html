@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="https://airaw.online/favicon.png">
+    <title>Ketentuan Layanan - AI RAW</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        /* MENGGUNAKAN PALET & STYLE YANG SAMA PERSIS DENGAN INDEX.HTML 
+        */
+
+        :root {
+            /* Default Light Mode: Dark Green */
+            --accent-color: #006400;
+            --accent-dim: rgba(0, 100, 0, 0.15);
+            --danger-color: #FF453A;
+
+            --bg-body: #FFFFFF;
+            --bg-card: #FFFFFF;
+            --text-primary: #000000;
+            --text-secondary: #6e6e73;
+            --border-color: rgba(60,60,67,0.12);
+
+            --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Inter", sans-serif;
+            --font-beatles: "Abril Fatface", serif;
+
+            --radius-md: 18px;
+            --shadow-lg: 0 20px 50px rgba(0,0,0,0.12);
+        }
+
+        [data-theme="dark"] {
+            /* Dark Mode: Neon Green */
+            --accent-color: #00FF00;            
+            --bg-body: #000000;
+            --bg-card: #111111;
+            --text-primary: #FFFFFF;
+            --text-secondary: rgba(235,235,245,0.65);
+            --border-color: rgba(255,255,255,0.1);
+        }
+
+        /* RESET & BASE */
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+        html, body { min-height: 100vh; width: 100%; background: var(--bg-body); color: var(--text-primary); font-family: var(--font-stack); -webkit-font-smoothing: antialiased; font-size: 15px; line-height: 1.6; transition: background 0.3s ease; }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(0, 255, 0, 0.3); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(0, 255, 0, 0.5); }
+
+        /* LAYOUT container specific for text pages */
+        .page-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px 80px 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* BRANDING HEADER */
+        .brand-header {
+            text-align: center;
+            margin-bottom: 40px;
+            animation: fadeIn 0.4s ease;
+        }
+        .logo-title {
+            font-family: var(--font-beatles);
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+        .page-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* CONTENT CARD */
+        .content-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 30px;
+            box-shadow: var(--shadow-lg);
+            margin-bottom: 30px;
+            animation: slideUp 0.4s ease;
+        }
+
+        h2 { font-size: 1.1rem; font-weight: 700; margin-top: 20px; margin-bottom: 10px; color: var(--accent-color); }
+        p { margin-bottom: 15px; color: var(--text-secondary); text-align: justify; }
+        ul { margin-bottom: 15px; padding-left: 20px; color: var(--text-secondary); }
+        li { margin-bottom: 8px; }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+    </style>
+</head>
+<body>
+
+<div class="page-container">
+    
+    <div class="brand-header">
+        <div class="logo-title">AI RAW</div>
+        <div class="page-title" id="page-title-text">Ketentuan Layanan</div>
+    </div>
+
+    <div class="content-card">
+        
+        <div id="content-id">
+            <p>Terakhir diperbarui: Januari 2026</p>
+
+            <h2>1. Pendahuluan</h2>
+            <p>Selamat datang di AI RAW. Dengan mengakses atau menggunakan layanan kami, Anda setuju untuk terikat oleh ketentuan layanan ini. Jika Anda tidak setuju dengan bagian mana pun dari ketentuan ini, Anda tidak diperkenankan menggunakan layanan kami.</p>
+
+            <h2>2. Penggunaan Layanan</h2>
+            <p>AI RAW menyediakan layanan asisten berbasis kecerdasan buatan. Anda setuju untuk menggunakan layanan ini hanya untuk tujuan yang sah dan sesuai dengan ketentuan berikut:</p>
+            <ul>
+                <li>Tidak menggunakan layanan untuk tindakan ilegal atau melanggar hukum.</li>
+                <li>Tidak mencoba merusak, mendekompilasi, atau mengganggu integritas sistem AI RAW.</li>
+                <li>Bertanggung jawab penuh atas konten (teks/gambar) yang Anda input ke dalam sistem.</li>
+            </ul>
+
+            <h2>3. Akun dan Keamanan</h2>
+            <p>Jika Anda memilih untuk login menggunakan Google, kami akan menyimpan riwayat percakapan Anda secara lokal atau terenkripsi sesuai kebijakan privasi kami. Anda bertanggung jawab untuk menjaga kerahasiaan akses perangkat Anda.</p>
+
+            <h2>4. Batasan Tanggung Jawab</h2>
+            <p>AI RAW disediakan "sebagaimana adanya". Kami tidak menjamin bahwa respons AI akan selalu 100% akurat, bebas dari kesalahan, atau sesuai untuk kebutuhan spesifik Anda. Informasi yang diberikan oleh AI tidak boleh dianggap sebagai nasihat profesional (medis, hukum, atau keuangan).</p>
+
+            <h2>5. Perubahan Ketentuan</h2>
+            <p>Kami berhak untuk mengubah ketentuan layanan ini kapan saja. Perubahan akan berlaku segera setelah diposting di halaman ini. Penggunaan berkelanjutan Anda atas layanan setelah perubahan merupakan persetujuan Anda terhadap ketentuan baru tersebut.</p>
+        </div>
+
+        <div id="content-en" style="display: none;">
+            <p>Last updated: January 2026</p>
+
+            <h2>1. Introduction</h2>
+            <p>Welcome to AI RAW. By accessing or using our services, you agree to be bound by these terms of service. If you do not agree with any part of these terms, you are not permitted to use our services.</p>
+
+            <h2>2. Use of Service</h2>
+            <p>AI RAW provides artificial intelligence-based assistant services. You agree to use this service only for lawful purposes and in accordance with the following terms:</p>
+            <ul>
+                <li>Do not use the service for illegal or unlawful acts.</li>
+                <li>Do not attempt to damage, decompile, or interfere with the integrity of the AI RAW system.</li>
+                <li>You are fully responsible for the content (text/images) you input into the system.</li>
+            </ul>
+
+            <h2>3. Account and Security</h2>
+            <p>If you choose to log in using Google, we will store your conversation history locally or encrypted according to our privacy policy. You are responsible for maintaining the confidentiality of your device access.</p>
+
+            <h2>4. Limitation of Liability</h2>
+            <p>AI RAW is provided "as is". We do not guarantee that AI responses will always be 100% accurate, error-free, or suitable for your specific needs. Information provided by the AI should not be considered professional advice (medical, legal, or financial).</p>
+
+            <h2>5. Changes to Terms</h2>
+            <p>We reserve the right to change these terms of service at any time. Changes will be effective immediately upon posting on this page. Your continued use of the service after changes constitutes your acceptance of the new terms.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const htmlTag = document.documentElement;
+        // 1. Theme Sync
+        const storedTheme = localStorage.getItem('ari_theme');
+        let isDark = storedTheme !== 'light'; 
+        htmlTag.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+        // 2. Language Sync
+        const currentLang = localStorage.getItem('ari_lang') || 'ID';
+        const contentID = document.getElementById('content-id');
+        const contentEN = document.getElementById('content-en');
+        const titleText = document.getElementById('page-title-text');
+
+        if (currentLang === 'EN') {
+            contentID.style.display = 'none';
+            contentEN.style.display = 'block';
+            titleText.textContent = "Terms of Service";
+            document.title = "Terms of Service - AI RAW";
+        } else {
+            contentID.style.display = 'block';
+            contentEN.style.display = 'none';
+            titleText.textContent = "Ketentuan Layanan";
+            document.title = "Ketentuan Layanan - AI RAW";
+        }
+    });
+</script>
+
+</body>
+</html>

